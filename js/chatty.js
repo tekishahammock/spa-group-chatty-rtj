@@ -13,3 +13,7 @@ largeText.addEventListener("click", function(event) {
   body.classList.toggle("");
 });
 
+
+
+// disable clear button if no messages in the container
+document.getElementById("clear")[0].setAttribute("disabled", true);
