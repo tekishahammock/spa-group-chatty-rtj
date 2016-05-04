@@ -1,5 +1,7 @@
-var chatty = (function() {
-  function putMessageinDOM() {
+var chatty = (function(chatty) {
+  var chatbox = document.getElementById('chatbox');
+
+  chatty.putMessageinDOM = function(defaultXHR) {
     var messages = JSON.parse(defaultXHR.responseText);
     console.log(messages);
   }
@@ -8,5 +10,7 @@ var chatty = (function() {
   defaultXHR.addEventListener("load", putMessagesinDOM);
   defaultXHR.open("GET", "js/jsoniife.js");
   defaultXHR.send();
+
+  return chatty;
 
 }( chatty || {} ));
