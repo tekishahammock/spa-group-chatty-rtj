@@ -16,4 +16,4 @@ largeText.addEventListener("click", function(event) {
 
 
 // disable clear button if no messages in the container
-document.getElementById("clear")[0].setAttribute("disabled", true);
+// document.getElementById("clear")[0].setAttribute("disabled", true);
