@@ -4,33 +4,39 @@
 }
 
 .messageBox1 {
-	background-color: blue;
-	padding: 25px 30px 0px 30px;
-	margin: 20px 50px 15px 50px;
+	background-color: #66ccff;
+	width: 100%;
+	position: fixed;
+	opacity: 0.8;
+	top: 0px;
+	left: 0px;
+	padding-top: 15px;
+	padding-left: 150px;
+	padding-bottom: 40px;
+
 }
 
 #clear {
 	background-color: lightgrey;
 	border-radius: 20px;
+	font-size: 20px;
 
 }
 
-#dark-theme {
-	float: left;
-}
-
-#large-text{
-	float: left;
+#themeSize {
+	padding-top: 8px;
+	padding-left: 10px;
+	bottom: auto;
 }
 
 
 .message {
 	line-height: 30px;
-	width: 75%;
+	width: 60%;
 	border-width: 2px;
 	border-style: solid;
 }
 
 #chatbox {
-	margin: 2% 15% 2% 15%;
+	margin: 15% 15% 2% 15%;
 }
