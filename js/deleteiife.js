@@ -7,6 +7,7 @@ var chatty = (function(chatty) {
 
   chatty.clearAllMessages = function(clickEvent) {
     removeElement.parentNode.removeChild(removeElement);
+    chatty.clearArray();
   }
 
   return chatty

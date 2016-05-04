@@ -14,6 +14,11 @@ var chatty = (function(originalChatty) {
 	}
 }
 
+  originalChatty.clearArray = function() {
+    messageArray.length = 0;
+    console.log(messageArray);
+  };
+
 return originalChatty;
 
 })(chatty || {});
