@@ -4,7 +4,8 @@ var chatty = (function(chatty) {
   chatty.putMessagesinDOM = function() {
     var messages = JSON.parse(defaultXHR.responseText);
     for (var i = 0; i < messages.default_message.length; i++) {
-      chatbox.innerHTML += `<div class="userMessage">${messages.default_message[i]} <button type="delete" class="delete">delete</button></div>`;
+      console.log(messages.default_message[i]);
+      chatty.userInputMessages(messages.default_message[i]);
     }
   }
 
