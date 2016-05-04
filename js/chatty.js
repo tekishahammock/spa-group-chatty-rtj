@@ -4,9 +4,10 @@ var body = document.getElementById("bod");
 // adding event listener for keypress
 document.addEventListener("keyup", function(e) {
   if (e.keyCode === 13) {
-    originalChatty.userInputMessages(e);
+    chatty.userInputMessages(e);
   }
 });
+
 
 // adding event listener to the Dark Theme button
 var darkTheme = document.getElementById("darkTheme");
@@ -22,9 +23,12 @@ largeText.addEventListener("click", function(event) {
 
 // adding event listener for delete buttons
 var removeElement = document.getElementById("chatbox");
-console.log(removeElement);
+console.log("stuff", removeElement);
 removeElement.addEventListener("click", chatty.deleteMessage);
 
+// adding event listener for clear button
+var clearAll = document.getElementById("clear");
+clearAll.addEventListener("click", chatty.clearAllMessages);
 
 // disable clear button if no messages in the container
 // document.getElementById("clear")[0].setAttribute("disabled", true);
