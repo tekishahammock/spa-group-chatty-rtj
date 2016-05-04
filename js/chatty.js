@@ -4,7 +4,7 @@ var body = document.getElementById("bod");
 // adding event listener for keypress
 document.addEventListener("keyup", function(e) {
   if (e.keyCode === 13) {
-    originalChatty.userInputMessages(e);
+    chatty.userInputMessages(e);
   }
 });
 
@@ -22,7 +22,7 @@ largeText.addEventListener("click", function(event) {
 
 // adding event listener for delete buttons
 var removeElement = document.getElementById("chatbox");
-console.log(removeElement);
+console.log("stuff", removeElement);
 removeElement.addEventListener("click", chatty.deleteMessage);
 
 // disable clear button if no messages in the container
