@@ -7,10 +7,11 @@ var chatty = (function(originalChatty) {
   var userInput = document.getElementById("userInput").value;
   messageArray.push(userInput);
   console.log(messageArray);
-  	// for (var i = 0; i < userMess.length; i++) {
-
-		// }
-	},
+  for (var i = 0; i < messageArray.length; i++) {
+      outputDOM += `<div id="chatbox">`;
+      outputDOM += `{userInput.messsageArray}`;
+	}
+}
 
 return originalChatty;
 
