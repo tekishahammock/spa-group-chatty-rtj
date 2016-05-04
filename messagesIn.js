@@ -1,12 +1,16 @@
 var chatty = (function(originalChatty) {
 
-	function function_name(argument) {
-		var mesgString = "";
-		var outputDOM = document.getElementById("chatbox");
-		for (var i = 0; i < argument.length; i++) {
-			outputDOM += mesgString;
-		}
-	}
+  var messageArray = [];
+	var outputDOM = document.getElementById("chatbox");
+
+  originalChatty.userInputMessages = function(userMess) {
+  var userInput = document.getElementById("userInput").value;
+  messageArray.push(userInput);
+  console.log(messageArray);
+  	// for (var i = 0; i < userMess.length; i++) {
+
+		// }
+	},
 
 return originalChatty;
 
