@@ -4,6 +4,7 @@ var chatty = (function(originalChatty) {
   var outputDOM = document.getElementById("chatbox");
 
   originalChatty.userInputMessages = function(userMess) {
+
   var userInput = document.getElementById("userInput");
   var userStuff = userInput.value
   messageArray.push(userStuff);
@@ -15,7 +16,6 @@ var chatty = (function(originalChatty) {
       outputDOM.innerHTML += `<div class="userMessage">${currentMessage}<button type="delete" id="delete[i]" class="delete">delete</button></div>`;
   }
 }
-
   originalChatty.clearArray = function() {
     messageArray.length = 0;
     console.log(messageArray);
