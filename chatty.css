@@ -78,8 +78,12 @@ h2 {
 }
 
 .dark-theme {
-  background-color: darkgray;
+  background-color: #202020;
   color: white;
+}
+
+.dark-theme .userMessage {
+  background-color: #454E51;
 }
 
 .make-large {
