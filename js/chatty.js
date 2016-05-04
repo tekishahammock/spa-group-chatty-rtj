@@ -1,16 +1,16 @@
 // linking to body for theme changes from checkboxes (incomplete)
-var body = document.getElementById("");
+var body = document.getElementById("bod");
 
 // adding event listener to the Dark Theme button (incomplete)
 var darkTheme = document.getElementById("darkTheme");
 darkTheme.addEventListener("click", function(event) {
-  body.classList.toggle("");
+  body.classList.toggle("dark-theme");
 });
 
 // adding event listener to the Large Text button (incomplete)
 var largeText = document.getElementById("largeText");
 largeText.addEventListener("click", function(event) {
-  body.classList.toggle("");
+  body.classList.toggle("make-large");
 });
 
 
