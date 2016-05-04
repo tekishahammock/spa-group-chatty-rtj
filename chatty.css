@@ -37,7 +37,16 @@
 	border-style: solid;
 }
 
-#chatarea {
-	margin: 15% 15% 2% 15%;
-	height: 700px;
+
+#chatbox {
+	margin: 2% 15% 2% 15%;
+}
+
+.dark-theme {
+	background-color: darkgray;
+	color: white;
+}
+
+.make-large {
+	font-size: x-large;
 }
