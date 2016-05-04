@@ -1,6 +1,13 @@
 // linking to body for theme changes from checkboxes
 var body = document.getElementById("bod");
 
+// adding event listener for keypress
+document.addEventListener("keyup", function(e) {
+  if (e.keyCode === 13) {
+    originalChatty.userInputMessages(e);
+  }
+});
+
 // adding event listener to the Dark Theme button
 var darkTheme = document.getElementById("darkTheme");
 darkTheme.addEventListener("click", function(event) {
