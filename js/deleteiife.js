@@ -5,6 +5,10 @@ var chatty = (function(chatty) {
     removeElement.removeChild(clickEvent.target.parentNode);
   }
 
+  chatty.clearAllMessages = function(clickEvent) {
+    removeElement.parentNode.removeChild(removeElement);
+  }
+
   return chatty
 }( chatty || {}));
 
