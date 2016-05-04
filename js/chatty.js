@@ -18,5 +18,6 @@ var removeElement = document.getElementById("chatbox");
 console.log(removeElement);
 removeElement.addEventListener("click", chatty.deleteMessage);
 
+
 // disable clear button if no messages in the container
 // document.getElementById("clear")[0].setAttribute("disabled", true);
