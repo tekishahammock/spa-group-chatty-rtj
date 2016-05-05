@@ -7,9 +7,9 @@ var chatty = (function(originalChatty) {
 
   var counter = 0;
   // function for creating messages, enabling the "disabled" clear button, and scrolling page down to last message
-  originalChatty.userInputMessages = function(userStuff) {
-    messageArray.push({id:counter, message:userStuff, timestamp:new Date()});
-    chatbox.innerHTML += `<div class="userMessage">${userStuff}<button type="delete" id="delete${counter}" class="delete">delete</button><p>${messageArray[messageArray.length - 1].timestamp}</p></div>`;
+  originalChatty.userInputMessages = function(messageInfo) {
+    messageArray.push({id:counter, message:messageInfo, timestamp:new Date()});
+    chatbox.innerHTML += `<div class="userMessage"><h3>${messageInfo.user}</h3><p>${messageInfo.messageStr}</p><button type="delete" id="delete${counter}" class="delete">delete</button><p>${messageArray[messageArray.length - 1].timestamp}</p></div>`;
     clearAll.removeAttribute("disabled");
     counter++;
     console.log("this", chatbox.children.length);
