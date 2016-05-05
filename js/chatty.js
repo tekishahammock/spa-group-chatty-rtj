@@ -5,9 +5,12 @@ var body = document.getElementById("bod");
 // adding event listener for keypress
 document.addEventListener("keyup", function(e) {
   if (e.keyCode === 13) {
-  	var userInput = document.getElementById("userInput");
-  	var userStuff = userInput.value;
-    chatty.userInputMessages(userStuff);
+    var messageInfo = {};
+    var userInput = document.getElementById("userInput");
+    messageInfo.message = userInput.value;
+    var userOptions = document.getElementsByClassName("userOptions");
+    messageInfo.user = userOptions.value;
+    chatty.userInputMessages(messageInfo);
     userInput.value = "";
   }
 });
