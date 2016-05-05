@@ -1,10 +1,10 @@
+// JSON IIFE FOR AUGMENTING CHATTY TO SHOW DEFAULT MESSAGE OBJECTS
 var chatty = (function(chatty) {
-  var chatbox = document.getElementById('chatbox');
 
+  // Runs the parsed JSON text through the function that formats messages for the DOM and the private array
   chatty.putMessagesinDOM = function() {
     var messages = JSON.parse(defaultXHR.responseText);
     for (var i = 0; i < messages.default_message.length; i++) {
-      console.log(messages.default_message[i]);
       chatty.userInputMessages(messages.default_message[i]);
     }
   }

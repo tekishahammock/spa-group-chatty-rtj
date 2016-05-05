@@ -1,15 +1,17 @@
+// IIFE FOR DELETING/REMOVING INFORMATION OUT OF THE DOM
 var chatty = (function(chatty) {
 
+  // function for deleting individual message elements out of the DOM
   chatty.deleteMessage = function(clickEvent) {
-    console.log(clickEvent);
-    console.log(clickEvent.target.parentNode)
-    removeElement.removeChild(clickEvent.target.parentNode);
+    var clicked = clickEvent.target;
+    chatbox.removeChild(clicked.parentNode);
+    chatty.deleteObject(clicked.id.replace("delete", ""));
   }
 
+  // function for deleting ALL message elements out of the DOM, disables clear button
   chatty.clearAllMessages = function(clickEvent) {
-    console.log(removeElement);
-    while (removeElement.firstChild) {
-      removeElement.removeChild(removeElement.firstChild);
+    while (chatbox.firstChild) {
+      chatbox.removeChild(removeElement.firstChild);
     }
     chatty.clearArray();
     clearAll.setAttribute("disabled", "disabled");
@@ -17,5 +19,3 @@ var chatty = (function(chatty) {
 
   return chatty
 }( chatty || {}));
-
-
