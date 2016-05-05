@@ -7,6 +7,7 @@ var chatty = (function(originalChatty) {
     messageArray.push(userStuff);
     console.log(messageArray);
     outputDOM.innerHTML += `<div class="userMessage">${userStuff}<button type="delete" id="delete[i]" class="delete">delete</button></div>`;
+    clearAll.removeAttribute("disabled");
   };
 
   originalChatty.clearArray = function() {

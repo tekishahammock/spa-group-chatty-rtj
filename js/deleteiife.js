@@ -12,6 +12,7 @@ var chatty = (function(chatty) {
       removeElement.removeChild(removeElement.firstChild);
     }
     chatty.clearArray();
+    clearAll.setAttribute("disabled", "disabled");
   }
 
   return chatty
