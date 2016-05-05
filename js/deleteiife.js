@@ -2,10 +2,9 @@
 var chatty = (function(chatty) {
 
   // function for deleting individual message elements out of the DOM
-  chatty.deleteMessage = function(clickEvent) {
-    var clicked = clickEvent.target;
-    chatbox.removeChild(clicked.parentNode);
-    chatty.deleteObject(clicked.id.replace("delete", ""));
+  chatty.deleteMessage = function(deleteClicked) {
+    chatbox.removeChild(deleteClicked.parentNode);
+    chatty.deleteObject(deleteClicked.id.replace("delete", ""));
   }
 
   // function for deleting ALL message elements out of the DOM, disables clear button

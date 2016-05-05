@@ -9,7 +9,7 @@ var chatty = (function(originalChatty) {
   // function for creating messages, enabling the "disabled" clear button, and scrolling page down to last message
   originalChatty.userInputMessages = function(messageInfo) {
     messageArray.push({id:counter, message:messageInfo, timestamp:new Date()});
-    chatbox.innerHTML += `<div class="userMessage"><h3>${messageInfo.user}</h3><p>${messageInfo.messageStr}</p><button type="delete" id="delete${counter}" class="delete">delete</button><p>${messageArray[messageArray.length - 1].timestamp}</p></div>`;
+    chatbox.innerHTML += `<div class="userMessage"><h3>${messageInfo.user}</h3><p>${messageInfo.messageStr}</p><button type="delete" id="delete${counter}" class="delete">delete</button><button type="edit" id="edit${counter}" class="edit">edit</button><p>${messageArray[messageArray.length - 1].timestamp}</p></div>`;
     clearAll.removeAttribute("disabled");
     counter++;
     console.log("this", chatbox.children.length);
@@ -39,6 +39,28 @@ var chatty = (function(originalChatty) {
   originalChatty.clearArray = function() {
     messageArray.length = 0;
   };
+
+  var currentMessage = "";
+
+  originalChatty.editFocus = function (editClicked) {
+    edit = true;
+    currentMessage = editClicked;
+    console.log("i am working");
+    var inputEdit = document.getElementById("userInput");
+    inputEdit.focus();
+    for (var i = 0; i < messageArray.length; i++) {
+      if (messageArray[i].id == editClicked.id.replace("edit", "")) {
+        console.log(currentMessage);
+        inputEdit.setAttribute("placeholder", messageArray[i].message.messageStr);
+      }
+    }
+  };
+
+  originalChatty.editor = function () {
+    console.log(currentMessage);
+    currentMessage.previousSibling.previousSibling.innerHTML = document.getElementById('userInput').value;
+    edit = false;
+  }
 
 return originalChatty;
 
