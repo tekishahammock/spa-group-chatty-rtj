@@ -14,6 +14,10 @@ var chatty = (function(originalChatty) {
     chatbox.innerHTML += `<div class="userMessage">${userStuff}<button type="delete" id="delete${counter}" class="delete">delete</button></div>`;
     clearAll.removeAttribute("disabled");
     counter++;
+    console.log("this", chatbox.children.length);
+    if (chatbox.children.length > 20) {
+      chatbox.removeChild(chatbox.getElementsByTagName("div")[0]);
+    }
     window.scrollTo(0,document.body.scrollHeight);
   };
 
