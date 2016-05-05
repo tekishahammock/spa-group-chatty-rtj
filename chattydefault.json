@@ -1,9 +1,29 @@
 {
   "default-message": [
-    "Hello, welcome to Chatty!",
-    "Chatty is the best message app in the world!",
-    "To use Chatty, simply type into the input field above and press the 'Enter'/'Return' key to send your message",
-    "To delete a message, press the 'delete' button next to the message or 'clear all' above to remove us all!",
-    "Have fun!!! :D"
+    {
+      "user": "Chatty",
+      "message": "Hello, welcome to Chatty!"
+    },
+
+    {
+      "user": "Chatty",
+      "message": "Chatty is the best message app in the world!"
+    },
+
+    {
+      "user": "Chatty",
+      "message": "To use Chatty, simply type into the input field above and press the 'Enter'/'Return' key to send your message"
+    },
+
+    {
+      "user": "Chatty",
+      "message": "To delete a message, press the 'delete' button next to the message or 'clear all' above to remove us all!"
+    },
+
+    {
+    "user": "Chatty",
+    "message": "Have fun!!! :D"
+    }
+
   ]
 }
