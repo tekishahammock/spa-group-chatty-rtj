@@ -7,9 +7,14 @@ document.addEventListener("keyup", function(e) {
   if (e.keyCode === 13) {
     var messageInfo = {};
     var userInput = document.getElementById("userInput");
-    messageInfo.message = userInput.value;
+    messageInfo.messageStr = userInput.value;
+    console.log(messageInfo.messageStr);
     var userOptions = document.getElementsByClassName("userOptions");
-    messageInfo.user = userOptions.value;
+    for (var i = 0; i < userOptions.length; i++) {
+      if (userOptions[i].checked){
+        messageInfo.user = userOptions[i].value;
+      }
+    }
     chatty.userInputMessages(messageInfo);
     userInput.value = "";
   }
