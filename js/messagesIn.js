@@ -17,6 +17,8 @@ var chatty = (function(originalChatty) {
     console.log("this", chatbox.children.length);
     if (chatbox.children.length > 20) {
       chatbox.removeChild(chatbox.getElementsByTagName("div")[0]);
+      var twentyAlert = document.getElementById('twentyPlus');
+      twentyAlert.innerHTML = "Only the 20 newest messages are being shown";
     }
     window.scrollTo(0,document.body.scrollHeight);
   };
