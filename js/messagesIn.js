@@ -9,7 +9,7 @@ var chatty = (function(originalChatty) {
   // function for creating messages, enabling the "disabled" clear button, and scrolling page down to last message
   originalChatty.userInputMessages = function(messageInfo) {
     messageArray.push({id:counter, message:messageInfo, timestamp:new Date()});
-    chatbox.innerHTML += `<div class="userMessage"><h3>${messageInfo.user}</h3><p>${messageInfo.messageStr}</p><button type="delete" id="delete${counter}" class="delete">delete</button><button type="edit" id="edit${counter}" class="edit">edit</button><p>${messageArray[messageArray.length - 1].timestamp}</p></div>`;
+    chatbox.innerHTML += `<div class="userMessage"><h3>${messageInfo.user}:</h3><p class="mess">${messageInfo.messageStr}</p><div class="messageButtons"><button type="delete" id="delete${counter}" class="delete">delete</button><button type="edit" id="edit${counter}" class="edit">edit</button></div><p class="initial-timestamp">${messageArray[messageArray.length - 1].timestamp}</p></div>`;
     clearAll.removeAttribute("disabled");
     counter++;
     console.log("this", chatbox.children.length);
@@ -58,7 +58,7 @@ var chatty = (function(originalChatty) {
 
   originalChatty.editor = function () {
     console.log(currentMessage);
-    currentMessage.previousSibling.previousSibling.innerHTML = document.getElementById('userInput').value;
+    currentMessage.parentNode.previousSibling.innerHTML = document.getElementById('userInput').value;
     edit = false;
   }
 
