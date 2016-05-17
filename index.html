@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RTJ Chatty</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300|Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="chatty.css">
+  </head>
+  <body id="bod">
+    <div class="header">
+
+      <h1>Chatty!</h1>
+      <nav class="messageBox">
+        <input class="message" id="userInput" type="text" placeholder="Enter Message"></input>
+        <div class="userOptions">
+          <div id="userNames">
+           <input type="radio" name="user" class="userOptions" value="John">John</input>
+           <input type="radio" name="user" class="userOptions" value="Kisha">Kisha</input>
+           <input type="radio" name="user" class="userOptions" value="Russell">Russell</input>
+           <input type="radio" name="user" class="userOptions" value="Alien">Alien</input>
+           <input type="radio" name="user" class="userOptions" value="CmdrShep">CmdrShep</input>
+          </div>
+
+          <div id="themeSize">
+            <input type="checkbox" name="dark-theme" id="darkTheme">Dark Theme
+            <input type="checkbox" name="large-text" id="largeText">Large Text
+          </div>
+        </div>
+        <div id="twentyPlus">
+
+        </div>
+
+        <button id="clear">Clear Messages</button>
+      </nav>
+    </div>
+    <div id="message-container">
+      <h2>Messages:</h2>
+      <div id="chatbox">
+      </div>
+    </div>
+
+    <script src="js/jsoniife.js" type="text/javascript"></script>
+    <script src="js/deleteiife.js" type="text/javascript"></script>
+    <script src="js/messagesIn.js" type="text/javascript"></script>
+    <script src="js/chatty.js" type="text/javascript"></script>
+  </body>
+</html>
